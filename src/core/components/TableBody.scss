@@ -1,0 +1,47 @@
+@import "../../common/helpers/colors.scss";
+
+@import "../../common/helpers/colors.scss";
+
+$main: ".table__body";
+
+#{$main} {
+  font-weight: 400;
+  text-align: center;
+  line-height: 2.5em;
+
+  &__cell {
+    &--name {
+      border-right: 4px solid $dark-gray;
+      background-color: rgba($light-blue, 0.1);
+    }
+
+    &--empty-slots {
+      background-color: rgba($green, 0.1);
+    }
+    &--free-bikes {
+      background-color: rgba($table-dark, 0.2);
+    }
+    &--date-time {
+      background-color: rgba(red, 0.1);
+    }
+  }
+
+  &__row {
+    &:nth-child(even) {
+      #{$main}__cell {
+        &--name {
+          background-color: rgba($light-blue, 0.3);
+        }
+        &--empty-slots {
+          background-color: rgba($green, 0.4);
+        }
+        &--free-bikes {
+          background-color: rgba($table-dark, 0.5);
+        }
+        &--date-time {
+          background-color: rgba(red, 0.3);
+        }
+      }
+    }
+  }
+}
